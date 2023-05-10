@@ -20,7 +20,7 @@ public class SpawnAsteroid : MonoBehaviour
             GameObject obstacle = Instantiate(obstacles[randomIndex], transform.position, Quaternion.identity);
 
             
-            Destroy(obstacle, 3f);
+            Destroy(obstacle, 10f);
 
             yield return new WaitForSeconds(2f);
         }
