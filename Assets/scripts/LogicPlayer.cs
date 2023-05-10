@@ -14,6 +14,12 @@ public class LogicPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rb.velocity = speed * (Input.GetAxis("Horizontal") * Vector3.right + Input.GetAxis("Vertical") * Vector3.forward);
+        float horizontalInput = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
+        float verticalInput = Input.GetAxis("Vertical") * speed * Time.deltaTime;
+
+        transform.Translate(horizontalInput, 0f, verticalInput);
+
+        Input.GetAxis("Horizontal");
+        Input.GetAxis("Vertical");
     }
 }
